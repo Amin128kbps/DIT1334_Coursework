@@ -1,0 +1,112 @@
+package Chapter1; //my package name
+
+
+//Main class to test
+public class Main {
+	public static void main(String[] args) {
+		Circle c = new Circle(5.0);
+		System.out.println("Radius: "+ c.radius);
+		System.out.println("Area: "+ c.area());
+		System.out.println("Circumference: "+ c.circumference());
+	}
+}
+
+
+
+package Chapter1;
+
+class Animal1 { //Parent class
+    void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+}
+
+// Subclass
+class Cat1 extends Animal1 {
+    void meow() {
+        System.out.println("The cat meows");
+    }
+}
+
+public class InheritanceCaseStudy {
+    public static void main(String[] args) {
+    	
+        Cat1 myCat = new Cat1();
+        myCat.sleep(); // inherited from Animal
+        myCat.meow(); // specific to the cat
+    }
+}
+package Chapter1;
+
+public class Learnjava {
+
+	public static void main(String[] args) {
+		
+		addExclamationPoint("BLYATT");
+	}
+
+	public static void addExclamationPoint(String s) {
+		System.out.println(s + "!");
+	}
+}
+
+package Chapter1;
+
+//Name : Mohammad Amin
+//Date of creation : 26/9/2025
+//Purpose of code : Smart Home Lighting System
+
+import java.util.Scanner;
+
+
+public class Light {
+	public static void main(String[]args) {
+		Scanner input = new Scanner (System.in);
+		
+		boolean running = true;
+		
+		while (running) {
+			System.out.println("\n=== Main Menu ===");
+			System.out.println("1. Living room");
+			System.out.println("2. Bedroom");
+			System.out.println("3. Kitchen");
+			System.out.println("4. Exit");
+			System.out.println("Select room: ");
+			
+			int choice = input.nextInt();
+			
+			switch (choice) { //user's choice
+			case 1:  //the switch case is like the menu of some sort
+                setBrightness("Living Room", input);
+                break;
+            case 2:
+                setBrightness("Bedroom", input);
+                break;
+            case 3:
+                setBrightness("Kitchen", input);
+                break;
+            case 4:
+                System.out.println("Exiting... Goodbye!");
+                running = false; //set the running code to false, it will stop the "while" loop
+                break;
+            default:
+                System.out.println("Invalid choice. Please select again.");
+        }
+    }
+
+    input.close();
+}
+
+// the method to set brightness for a specific room
+public static void setBrightness(String room, Scanner input) {
+	
+    System.out.print("Enter brightness level for " + room + " (0-100): ");
+    int num = input.nextInt();
+
+    if (num >= 0 && num <= 100) { //check if valuev is valid
+        System.out.println(room + " brightness is set to " + num + "%");
+    } else { //if not, then it's error
+        System.out.println("Invalid. Please enter between 0 and 100.");
+    }
+  }
+}
