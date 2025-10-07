@@ -1,0 +1,43 @@
+package Chapter1;
+
+//Name : Mohammad Amin
+//Date of creation : 30/9/2025
+//Purpose of code : Example builidng class
+
+public class Cat {
+	//Attributes
+	String name;
+	String kind;
+	String color;
+	
+	//method
+	public void displayCatInfo() {
+		System.out.println("name: " + name);
+		System.out.println("kind: " + kind);
+		System.out.println("color: " + color);
+		
+	}
+
+	public static void main (String[]args) {
+		//create an object of the cat class
+		Cat myCat = new Cat();
+		
+		//Assign values to the objects
+		myCat.name = "Abuya";
+		myCat.kind = "Persian";
+		myCat.color = "Black";
+		
+		myCat.displayCatInfo();
+		
+        Cat yourCat = new Cat();
+		
+		//same class but different object
+		yourCat.name = "Sumbul";
+		yourCat.kind = "Mongolian";
+		yourCat.color = "Yellow";
+		
+		yourCat.displayCatInfo();
+		
+		
+	}
+}
