@@ -1,0 +1,28 @@
+package Chapter1;
+
+//Name : Mohammad Amin
+//Date of creation : 1/10/2025
+//Purpose of code : Overriding method example
+
+class Furniture { //main class
+	void description() {
+		System.out.println("This is a furniture");
+	}
+}
+
+
+class Table extends Furniture { //extract the main class that override
+	@Override                  //the "description" method
+	void description() { //overrided method to show the description of the furniture
+		System.out.println("This is a table"); //the output
+	}
+}
+
+public class Polymorphism {
+	public static void main(String[]args) {
+		
+		Furniture f = new Table();
+		f.description();
+	}
+
+}
