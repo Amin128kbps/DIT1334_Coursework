@@ -1,0 +1,47 @@
+package Chapter1;
+
+//Name : Mohammad Amin
+//Date of creation : 30/9/2025
+//Purpose of code : 
+
+
+class Animals { //parent class
+	void attribute() {
+		System.out.println("Animals have multiple attributes");
+		
+	}
+}
+
+class Reptiles extends Animals { //child class
+	void attribute() {
+		System.out.println("Reptiles can multiply");
+	}
+}
+
+class Mammals extends Animals { //child class
+	void attribute() {
+		System.out.println("Mammals can give birth");
+	}
+}
+
+class Insects extends Animals { //child class
+	void attribute() {
+		System.out.println("Insects can fly");
+	}
+}
+
+public class Test3 {
+	public static void main(String[]args) {
+		Animals x;
+		x = new Reptiles();
+		x.attribute();
+		
+		x = new Mammals();
+		x.attribute();
+		
+		x = new Insects();
+		x.attribute();
+		
+	}
+
+}
