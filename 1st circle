@@ -1,0 +1,23 @@
+package Chapter1; //my package name
+
+//Author Name: Mohammad Amin
+//Date of Creation: 18.09.2025
+//Purpose of Code: Circle Testing
+
+public class Circle {
+	double radius; // this variable holds the radius of the circle
+	
+	//Constructor
+	Circle(double r){
+		radius = r; // assigns the value of r inside the circle's radius
+	}
+	//Method to calculate area
+	double area() {
+		return Math.PI * radius * radius; // formula: πr^2
+	}
+	//Method to calculate circumference
+	double circumference() {
+		return 2 * Math.PI * radius; // formula 2πr
+	}
+}
+
