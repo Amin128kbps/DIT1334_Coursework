@@ -1,0 +1,23 @@
+package Chapter1;
+
+class Animal1 { //Parent class
+    void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+}
+
+// Subclass
+class Cat1 extends Animal1 {
+    void meow() {
+        System.out.println("The cat meows");
+    }
+}
+
+public class InheritanceCaseStudy {
+    public static void main(String[] args) {
+    	
+        Cat1 myCat = new Cat1();
+        myCat.sleep(); // inherited from Animal
+        myCat.meow(); // specific to the cat
+    }
+}
